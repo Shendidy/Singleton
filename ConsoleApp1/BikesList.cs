@@ -6,9 +6,10 @@ namespace ConsoleApp1
 {
     public class BikesList
     {
+        private static readonly BikesList _instance = new BikesList();
         private List<string> bikesList = new List<string>();
         private int bikeInTurnIndex = 0;
-        public BikesList()
+        private BikesList()
         {
             bikesList.Add("Bike-01");
             bikesList.Add("Bike-02");
@@ -23,5 +24,7 @@ namespace ConsoleApp1
             if (bikeInTurnIndex >= bikesList.Count) bikeInTurnIndex = 0;
             return bike;
         }
+
+        public static BikesList GetBikesList() => _instance;
     }
 }
