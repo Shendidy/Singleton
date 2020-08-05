@@ -1,5 +1,6 @@
 using ConsoleApp1;
 using NUnit.Framework;
+using System.Linq;
 
 namespace Bikes.Tests
 {
@@ -18,8 +19,11 @@ namespace Bikes.Tests
             //Arr
             string result;
             while (true)
-                if (counter1.GetBikeInTurn() == "Bike-04") break;
-            
+            {
+                if (counter1.GetBikeInTurnIndex() == 0) break;
+                counter1.GetBikeInTurn();
+            }
+
             for (int i = 1; i < 5; i++)
             {
                 //Act
@@ -36,7 +40,11 @@ namespace Bikes.Tests
         {
             //Arr
             while (true)
-                if (counter1.GetBikeInTurn() == "Bike-04") break;
+            {
+                if (counter1.GetBikeInTurnIndex() == 0) break;
+                counter1.GetBikeInTurn();
+            }
+
             string result;
 
             for (int i = 1; i < 5; i++)
@@ -57,7 +65,10 @@ namespace Bikes.Tests
         {
             //Arr
             while (true)
-                if (counter1.GetBikeInTurn() == "Bike-04") break;
+            {
+                if (counter1.GetBikeInTurnIndex() == 0) break;
+                counter1.GetBikeInTurn();
+            }
 
             //Act
             var result1 = counter1.GetBikeInTurn();
