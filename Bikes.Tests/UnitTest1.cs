@@ -27,9 +27,9 @@ namespace Bikes.Tests
         [Test]
         public void GetBikeInTurn_WhenCallsExceedTotalBikes_ShouldRotate()
         {
+            //Arr
             string result;
 
-            //Arr
             for (int i = 1; i < 5; i++)
             {
                 result = bikesList1.GetBikeInTurn();
@@ -41,6 +41,18 @@ namespace Bikes.Tests
 
             //Assert
             Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void GetBikeInTurn_WhenMoreThanOneCounter_ShouldUseTheSameBikesList()
+        {
+            //Act
+            var result1 = bikesList1.GetBikeInTurn();
+            var result2 = bikesList2.GetBikeInTurn();
+
+            //Assert
+            Assert.AreEqual("Bike-01", result1);
+            Assert.AreEqual("Bike-02", result2);
         }
     }
 }
