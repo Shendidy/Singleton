@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace Bikes.Tests
 {
+    [TestFixture]
     public class Tests
     {
         static BikesList counter1 = BikesList.GetBikesList();
