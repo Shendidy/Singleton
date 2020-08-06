@@ -5,7 +5,7 @@ using System.Linq;
 namespace Bikes.Tests
 {
     [TestFixture]
-    public class Tests
+    public class BikesListTests
     {
         static BikesList counter1 = BikesList.GetBikesList();
         static BikesList counter2 = BikesList.GetBikesList();
