@@ -1,8 +1,6 @@
-using ConsoleApp1;
 using NUnit.Framework;
-using System.Linq;
 
-namespace Bikes.Tests
+namespace ConsoleApp1.Tests
 {
     [TestFixture]
     public class BikesListTests
