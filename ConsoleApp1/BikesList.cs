@@ -31,3 +31,5 @@ namespace ConsoleApp1
         public int GetBikeInTurnIndex() => bikeInTurnIndex;
     }
 }
+// IOC rather than singleton
+// codility for practicing coding tests

@@ -10,6 +10,11 @@ namespace ConsoleApp1.Tests
         [SetUp]
         public void Setup()
         {
+            while (true)
+            {
+                if (counter1.GetBikeInTurnIndex() == 0) break;
+                counter1.GetBikeInTurn();
+            }
         }
 
         [Test]
@@ -17,11 +22,6 @@ namespace ConsoleApp1.Tests
         {
             //Arr
             string result;
-            while (true)
-            {
-                if (counter1.GetBikeInTurnIndex() == 0) break;
-                counter1.GetBikeInTurn();
-            }
 
             for (int i = 1; i < 5; i++)
             {
@@ -38,11 +38,6 @@ namespace ConsoleApp1.Tests
         public void GetBikeInTurn_WhenCallsExceedTotalBikes_ShouldRotate()
         {
             //Arr
-            while (true)
-            {
-                if (counter1.GetBikeInTurnIndex() == 0) break;
-                counter1.GetBikeInTurn();
-            }
 
             string result;
 
@@ -63,11 +58,6 @@ namespace ConsoleApp1.Tests
         public void GetBikeInTurn_WhenMoreThanOneCounter_ShouldUseTheSameBikesList()
         {
             //Arr
-            while (true)
-            {
-                if (counter1.GetBikeInTurnIndex() == 0) break;
-                counter1.GetBikeInTurn();
-            }
 
             //Act
             var result1 = counter1.GetBikeInTurn();
